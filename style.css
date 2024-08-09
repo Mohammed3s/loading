@@ -1,0 +1,98 @@
+* {
+
+    margin:0;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+
+    width:100%;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color:black;
+
+}
+
+.center {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.ring {
+
+    width:200px;
+    height:200px;
+    position: absolute;
+    border-radius: 50%;
+    animation-name:ring;
+    animation-timing-function:linear;
+    animation-duration:2s;
+    animation-delay:0;
+    animation-direction:normal;
+    animation-iteration-count:infinite;
+    animation-fill-mode:both;
+    animation-play-state:running;
+    
+}
+
+@keyframes ring {
+
+    0% {
+
+        transform:rotate(0deg);
+        box-shadow: 1px 2px 5px white;
+    } 
+
+    25% {
+
+        transform:rotate(90deg);
+        box-shadow: 1px 2px 5px white;
+    } 
+
+    50% {
+
+        transform:rotate(180deg);
+        box-shadow: 1px 2px 5px white;
+    } 
+
+    75% {
+
+        transform:rotate(270deg);
+        box-shadow: 1px 2px 5px white;
+    } 
+
+    100% {
+
+        transform:rotate(360deg);
+        box-shadow: 1px 2px 5px white;
+    } 
+
+}
+
+.ring::after {
+
+    content:'';
+    position: absolute;
+    left:0;
+    top:0;
+    box-shadow: 0 0 5px rgba(255,255,255,0.3);
+}
+
+span {
+
+    z-index: 1;
+    text-transform: uppercase;
+    color:gray;
+
+    font-size: 20px;
+    pointer-events:none;
+
+    letter-spacing:2px;
+}
